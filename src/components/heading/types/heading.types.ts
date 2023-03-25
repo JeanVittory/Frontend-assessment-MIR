@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 
-export type Props = {
+export type HeadingProps = {
   children: ReactNode;
+  className: string;
 };

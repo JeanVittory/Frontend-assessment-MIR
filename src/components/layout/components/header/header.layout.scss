@@ -1,8 +1,11 @@
 @import '@sass/themes/theme.themes.scss';
 @import '@sass/base/typographys.base.scss';
 @import '@sass/abstract/mixins.abstract.scss';
+@import '@sass/abstract/variables.abstract.scss';
 
 .header {
+  max-width: $max-width;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,6 +18,7 @@
     letter-spacing: 5px;
     font-size: $size-lg;
     @media screen and (min-width: 700px) {
+      position: fixed;
       z-index: 9999;
     }
   }

@@ -1,7 +1,8 @@
 import { useRef } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { navigationOptions } from './constants';
-import { NavigationLink } from '../../../navigationLink';
+import { NavigationLink } from './components/navigationLink';
+import { Button } from '@components/button';
 import './header.layout.scss';
 
 export default function Header() {
@@ -20,21 +21,21 @@ export default function Header() {
         {navigationOptions.map((e) => {
           return <NavigationLink key={e} text={e} />;
         })}
-        <button
-          type="button"
-          onClick={showNavBar}
+        <Button
           className="nav__button nav__close-button"
+          type="button"
+          event={showNavBar}
         >
           <FaTimes />
-        </button>
+        </Button>
       </nav>
-      <button
+      <Button
         type="button"
-        onClick={showNavBar}
+        event={showNavBar}
         className="nav__button nav__open-button"
       >
         <FaBars />
-      </button>
+      </Button>
     </header>
   );
 }

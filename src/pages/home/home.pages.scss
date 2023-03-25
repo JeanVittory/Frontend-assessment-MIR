@@ -1,0 +1,12 @@
+@import '@sass/abstract/variables.abstract.scss';
+
+.main {
+  max-width: $max-width;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 1rem;
+
+  .heading {
+    text-align: center;
+  }
+}

@@ -1,0 +1,18 @@
+@import '@sass/abstract/mixins.abstract.scss';
+@import '@sass/base/typographys.base.scss';
+
+h2 {
+  @include title(
+    $size: $size-lg,
+    $weight: weight-typo('sans', 'bold'),
+    $color: map-get($typography-colors, 'black')
+  );
+  transition: 1s;
+  display: inline-block;
+  margin-top: 2rem;
+  letter-spacing: 4px;
+
+  &:hover {
+    letter-spacing: 0px;
+  }
+}
