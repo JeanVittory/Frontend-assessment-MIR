@@ -1,0 +1,14 @@
+@import '@sass/base/typographys.base.scss';
+@import '@sass/abstract/mixins.abstract.scss';
+
+.nav__a {
+  @include paragraph($size: $size-xs);
+  color: map-get($typography-colors, 'white');
+  margin: 0 1rem;
+  text-decoration: none;
+  cursor: default;
+
+  @media screen and (min-width: 700px) {
+    cursor: pointer;
+  }
+}

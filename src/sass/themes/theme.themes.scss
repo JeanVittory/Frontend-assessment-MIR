@@ -1,0 +1,16 @@
+$theme-colors: (
+  'primary': (
+    'base': #11001c,
+    'light': #ffffff,
+  ),
+
+  'accent': (
+    'cyan': #41ead4,
+    'red': #f72585,
+  ),
+);
+
+@function theme-color($key: 'primary', $variant: 'base') {
+  $map: map-get($theme-colors, $key);
+  @return map-get($map, $variant);
+}
