@@ -5,7 +5,7 @@ import { NavigationLink } from './components/navigationLink';
 import { Button } from '@components/button';
 import './header.layout.scss';
 
-export default function Header() {
+export default function Header(): JSX.Element {
   const navRef = useRef<HTMLSelectElement>(null);
 
   const showNavBar = () => {
@@ -16,26 +16,28 @@ export default function Header() {
 
   return (
     <header className="header">
-      <h3 className="header__logo">LOGO</h3>
-      <nav ref={navRef} className="nav">
-        {navigationOptions.map((e) => {
-          return <NavigationLink key={e} text={e} />;
-        })}
+      <div className="wrapper">
+        <h3 className="header__logo">LOGO</h3>
+        <nav ref={navRef} className="nav">
+          {navigationOptions.map((e) => {
+            return <NavigationLink key={e} text={e} />;
+          })}
+          <Button
+            className="nav__button nav__close-button"
+            type="button"
+            event={showNavBar}
+          >
+            <FaTimes />
+          </Button>
+        </nav>
         <Button
-          className="nav__button nav__close-button"
           type="button"
           event={showNavBar}
+          className="nav__button nav__open-button"
         >
-          <FaTimes />
+          <FaBars />
         </Button>
-      </nav>
-      <Button
-        type="button"
-        event={showNavBar}
-        className="nav__button nav__open-button"
-      >
-        <FaBars />
-      </Button>
+      </div>
     </header>
   );
 }

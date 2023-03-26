@@ -23,6 +23,7 @@ specifiers:
   react-icons: ^4.8.0
   react-redux: ^8.0.5
   react-router-dom: ^6.9.0
+  react-spinners: ^0.13.8
   sass: ^1.60.0
   typescript: ^4.9.3
   vite: ^4.2.0
@@ -34,6 +35,7 @@ dependencies:
   react-icons: 4.8.0_react@18.2.0
   react-redux: 8.0.5_dgjuf3aqqre24bd27wvsbnxpoe
   react-router-dom: 6.9.0_biqbaboplfbrettd7655fr4n2y
+  react-spinners: 0.13.8_biqbaboplfbrettd7655fr4n2y
 
 devDependencies:
   '@types/node': 18.15.8
@@ -2475,6 +2477,16 @@ packages:
     dependencies:
       '@remix-run/router': 1.4.0
       react: 18.2.0
+    dev: false
+
+  /react-spinners/0.13.8_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-3e+k56lUkPj0vb5NDXPVFAOkPC//XyhKPJjvcGjyMNPWsBKpplfeyialP74G7H7+It7KzhtET+MvGqbKgAqpZA==}
+    peerDependencies:
+      react: ^16.0.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /react/18.2.0:

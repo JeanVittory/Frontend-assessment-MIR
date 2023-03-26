@@ -6,7 +6,7 @@ export default function Button({
   className,
   type,
   event,
-}: ButtonProps) {
+}: ButtonProps): JSX.Element {
   return (
     <button type={type} className={className} onClick={event}>
       {children}

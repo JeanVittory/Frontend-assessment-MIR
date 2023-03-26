@@ -3,7 +3,7 @@ import { NavigationLinks } from './types';
 import { formaterlink } from './utils';
 import './navigationLink.components.scss';
 
-export default function NavigationLink({ text }: NavigationLinks) {
+export default function NavigationLink({ text }: NavigationLinks): JSX.Element {
   const link = formaterlink(text);
 
   return (

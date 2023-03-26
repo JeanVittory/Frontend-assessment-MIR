@@ -1,0 +1,6 @@
+@import '@sass/abstract/mixins.abstract.scss';
+@import '@sass/base/typographys.base.scss';
+
+.caption {
+  @include subtitle($color: map-get($typography-colors, 'black'));
+}
