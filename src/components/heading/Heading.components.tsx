@@ -1,5 +1,5 @@
-import './heading.components.scss';
 import { HeadingProps } from './types';
+import './heading.components.scss';
 
 export default function Heading({
   children,

@@ -49,6 +49,10 @@ export default defineConfig({
         find: '@routes',
         replacement: path.resolve(path.join(__dirname, '/src/routes')),
       },
+      {
+        find: '@types',
+        replacement: path.resolve(path.join(__dirname, '/src/types')),
+      },
     ],
   },
 });

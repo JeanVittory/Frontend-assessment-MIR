@@ -1,1 +1,1 @@
-export const navigationOptions = ['HOME', 'ABOUT', 'PRODUCT DETAIL'];
+export const navigationOptions = ['HOME', 'ABOUT'];

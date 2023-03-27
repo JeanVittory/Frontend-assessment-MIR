@@ -23,7 +23,9 @@
       "@service/*": ["./service/*"],
       "@redux/*": ["./redux/*"],
       "@utils/*": ["./utils/*"],
-      "@hooks/*": ["./hooks/*"]
+      "@hooks/*": ["./hooks/*"],
+      "@types/*": ["./types/*"],
+      "@assets/*": ["./assets/*"]
     }
   },
   "include": [

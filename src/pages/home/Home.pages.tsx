@@ -4,10 +4,12 @@ import { Heading } from '@components/heading';
 import { ProductCard } from '@components/productCard';
 import { useGetProductsQuery } from '@service/products.service';
 import { GetProducts } from '@service/types';
+import { ReturnQueryProduct } from '../../types';
 import './home.pages.scss';
 
 export default function Home(): JSX.Element {
-  const { data, isError, isLoading, error } = useGetProductsQuery();
+  const { data, isError, isLoading, error } =
+    useGetProductsQuery<ReturnQueryProduct>();
   if (isLoading) return <Spinner />;
 
   if (isError || !data?.length) {
@@ -16,7 +18,7 @@ export default function Home(): JSX.Element {
   }
 
   return (
-    <main className="main progress-bar">
+    <main className="main">
       <Heading className="main__heading">PRODUCTS</Heading>
       <section className="main__products" data-aos="fade-right">
         {data.map((product: GetProducts) => {

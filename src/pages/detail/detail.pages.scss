@@ -1,3 +1,40 @@
+@import '@sass/abstract/variables.abstract.scss';
+
 .detail {
+  max-width: $max-width;
   margin-top: 80px;
+  margin: 80px auto;
+  padding: 1rem;
+
+  .product-detail__title {
+    margin-top: 2rem;
+  }
+
+  .product-detail__paragraph {
+    max-width: 440px;
+    text-align: center;
+  }
+
+  .product-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+}
+
+.active {
+  border: none;
+}
+
+.image-container {
+  width: 200px;
+
+  .image-container__image {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+  }
 }

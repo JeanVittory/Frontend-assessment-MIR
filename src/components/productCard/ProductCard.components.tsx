@@ -15,12 +15,12 @@ export default function ProductCard({
   const [isAllowed, setIsAllowed] = useState<boolean>(true);
 
   const minute: number = getRandomMinutes();
+  console.log(minute);
   const second: number = getRandomSeconds();
 
   const navigate = useNavigate();
 
   const handleDetail = (): void => {
-    console.log(isAllowed);
     if (!isAllowed) return;
     navigate(`/detail/${id}`);
     return;
@@ -34,7 +34,11 @@ export default function ProductCard({
       <Caption className="product__title">{title}</Caption>
       <div className="product__footer">
         <Timer minutes={minute} seconds={second} setIsAllowed={setIsAllowed} />
-        <Button type="button" event={handleDetail} className="product__button">
+        <Button
+          type="button"
+          event={handleDetail}
+          className={`${isAllowed ? 'able' : 'unable'} product__button`}
+        >
           Go to Detail
         </Button>
       </div>

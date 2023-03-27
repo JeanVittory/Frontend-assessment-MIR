@@ -2,8 +2,8 @@ import { useState, useEffect, Dispatch, SetStateAction } from 'react';
 import { ReturnUseCountDown } from './types';
 
 export default function useCountDown(
-  seconds: number,
   minutes: number,
+  seconds: number,
   setIsAllowed: Dispatch<SetStateAction<boolean>>
 ): ReturnUseCountDown {
   const [sec, setSec] = useState<number>(seconds);

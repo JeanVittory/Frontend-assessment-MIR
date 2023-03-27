@@ -1,10 +1,9 @@
 @import '@sass/abstract/mixins.abstract.scss';
 @import '@sass/base/typographys.base.scss';
 
-.caption {
-  @include subtitle(
+.paragraph {
+  @include paragraph(
     $color: map-get($typography-colors, 'black'),
-    $size: $size-md
+    $family: $font-titilium
   );
-  white-space: pre-line;
 }

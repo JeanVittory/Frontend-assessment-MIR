@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-export type HeadingProps = {
+export type ParagraphProps = {
   children: ReactNode;
   className?: string;
 };
