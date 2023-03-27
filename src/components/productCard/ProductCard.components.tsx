@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ProductCardProp } from './types';
 import { Caption } from '@components/caption';
@@ -11,11 +12,18 @@ export default function ProductCard({
   title,
   image,
 }: ProductCardProp): JSX.Element {
+  const [isAllowed, setIsAllowed] = useState<boolean>(true);
+
   const minute: number = getRandomMinutes();
   const second: number = getRandomSeconds();
+
   const navigate = useNavigate();
-  const handleDetail = () => {
+
+  const handleDetail = (): void => {
+    console.log(isAllowed);
+    if (!isAllowed) return;
     navigate(`/detail/${id}`);
+    return;
   };
 
   return (
@@ -25,7 +33,7 @@ export default function ProductCard({
       </div>
       <Caption className="product__title">{title}</Caption>
       <div className="product__footer">
-        <Timer minutes={minute} seconds={second} />
+        <Timer minutes={minute} seconds={second} setIsAllowed={setIsAllowed} />
         <Button type="button" event={handleDetail} className="product__button">
           Go to Detail
         </Button>

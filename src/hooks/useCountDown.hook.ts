@@ -1,13 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Dispatch, SetStateAction } from 'react';
 import { ReturnUseCountDown } from './types';
 
 export default function useCountDown(
   seconds: number,
-  minutes: number
+  minutes: number,
+  setIsAllowed: Dispatch<SetStateAction<boolean>>
 ): ReturnUseCountDown {
   const [sec, setSec] = useState<number>(seconds);
   const [min, setMin] = useState<number>(minutes);
-  const [isAllowed, setIsAllowed] = useState<boolean>(true);
 
   let timer: ReturnType<typeof setInterval>;
 
@@ -28,5 +28,5 @@ export default function useCountDown(
     return () => clearInterval(timer);
   }, [sec]);
 
-  return { sec, min, isAllowed };
+  return { sec, min };
 }
