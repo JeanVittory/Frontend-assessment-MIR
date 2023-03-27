@@ -8,7 +8,11 @@ export default function Button({
   event,
 }: ButtonProps): JSX.Element {
   return (
-    <button type={type} className={className} onClick={event}>
+    <button
+      type={type}
+      className={`${className} button grandient`}
+      onClick={event}
+    >
       {children}
     </button>
   );

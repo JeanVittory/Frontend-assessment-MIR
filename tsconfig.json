@@ -21,7 +21,9 @@
       "@pages/*": ["./pages/*"],
       "@constants/*": ["./constants/*"],
       "@service/*": ["./service/*"],
-      "@redux/*": ["./redux/*"]
+      "@redux/*": ["./redux/*"],
+      "@utils/*": ["./utils/*"],
+      "@hooks/*": ["./hooks/*"]
     }
   },
   "include": [

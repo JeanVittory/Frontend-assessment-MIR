@@ -1,0 +1,14 @@
+@import '@sass/base/typographys.base.scss';
+
+.button {
+  outline: none;
+  background-color: map-get($typography-colors, 'black');
+  border: none;
+  padding: 0.8rem 1rem;
+  color: map-get($typography-colors, 'white');
+  border-radius: 10px;
+
+  @media screen and (min-width: 700px) {
+    cursor: pointer;
+  }
+}

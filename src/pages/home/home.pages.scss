@@ -2,11 +2,23 @@
 
 .main {
   max-width: $max-width;
-  height: 100vh;
-  margin: 0 auto;
+  margin: 80px auto;
   padding: 1rem;
 
-  .heading {
-    text-align: center;
+  .main__products {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    @media screen and (min-width: 700px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  .main__heading {
+    margin-bottom: 3rem;
   }
 }

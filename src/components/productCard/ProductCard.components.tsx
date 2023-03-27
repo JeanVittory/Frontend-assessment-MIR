@@ -1,5 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import { ProductCardProp } from './types';
-import { Product } from './components/product';
+import { Caption } from '@components/caption';
+import { Button } from '@components/button';
+import { Timer } from '@components/timer';
+import { getRandomMinutes, getRandomSeconds } from '@utils/index';
 import './productCard.components.scss';
 
 export default function ProductCard({
@@ -7,9 +11,25 @@ export default function ProductCard({
   title,
   image,
 }: ProductCardProp): JSX.Element {
+  const minute: number = getRandomMinutes();
+  const second: number = getRandomSeconds();
+  const navigate = useNavigate();
+  const handleDetail = () => {
+    navigate(`/detail/${id}`);
+  };
+
   return (
-    <article className="product-container">
-      <Product title={title} image={image} />
+    <article className="product">
+      <div className="image-container">
+        <img src={image} alt={title} className="image-container__image" />
+      </div>
+      <Caption className="product__title">{title}</Caption>
+      <div className="product__footer">
+        <Timer minutes={minute} seconds={second} />
+        <Button type="button" event={handleDetail} className="product__button">
+          Go to Detail
+        </Button>
+      </div>
     </article>
   );
 }

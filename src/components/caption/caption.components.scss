@@ -2,5 +2,9 @@
 @import '@sass/base/typographys.base.scss';
 
 .caption {
-  @include subtitle($color: map-get($typography-colors, 'black'));
+  @include subtitle(
+    $color: map-get($typography-colors, 'black'),
+    $size: $size-sm
+  );
+  white-space: pre-line;
 }
