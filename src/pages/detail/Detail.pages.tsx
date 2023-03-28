@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { Rating } from 'semantic-ui-react';
 import { Caption } from '@components/caption';
 import { Paragraph } from '@components/paragraph';
+import { Spinner } from '@components/spinner';
 import { useGetProductsQuery } from '@service/products.service';
 import { ReturnQueryProduct } from '../../types';
 import { GetProducts } from '@service/types';
@@ -11,11 +12,13 @@ import './detail.pages.scss';
 
 export default function Detail(): JSX.Element {
   const { id } = useParams<ProductParam>();
-  const { data } = useGetProductsQuery<ReturnQueryProduct>();
+  const { data, isLoading } = useGetProductsQuery<ReturnQueryProduct>();
 
   const product: GetProducts | undefined = data?.find(
     (element: GetProducts) => element.id === +id!
   );
+
+  if (isLoading) return <Spinner />;
 
   return (
     <main className="detail">
