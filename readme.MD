@@ -42,4 +42,21 @@ pnpm i
 pnpm run dev
 ```
 
-**UNDER CONSTRUCTION**
+## ENV VARIABLES
+
+put at the project a .env file with:
+
+```sh
+ VITE_URL='https://fakestoreapi.com'
+```
+
+##TECH
+
+- [Typescript](https://www.typescriptlang.org/) - TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
+- [React](https://beta.es.reactjs.org/) - The library for web and native user interfaces
+- [Vite](https://vitejs.dev/) - build tool that aims to provide a faster and leaner development experience for modern web projects
+- [SASS](https://sass-lang.com/) -Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
+- [React Router Dom](https://reactrouter.com/en/main) - React Router enables "client side routing.
+- [Redux Toolkit Query](https://redux-toolkit.js.org/introduction/getting-started) - The Redux Toolkit package is intended to be the standard way to write Redux logic
+- [React Icons](https://react-icons.github.io/react-icons/) - Library to use popular icons easily.
+- [Semantic UI](https://semantic-ui.com/) - Library to use components.
