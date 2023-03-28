@@ -16,7 +16,6 @@ export default function Detail(): JSX.Element {
   const product: GetProducts | undefined = data?.find(
     (element: GetProducts) => element.id === +id!
   );
-  console.log(product);
 
   return (
     <main className="detail">

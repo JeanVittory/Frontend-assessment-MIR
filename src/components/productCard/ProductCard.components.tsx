@@ -15,7 +15,6 @@ export default function ProductCard({
   const [isAllowed, setIsAllowed] = useState<boolean>(true);
 
   const minute: number = getRandomMinutes();
-  console.log(minute);
   const second: number = getRandomSeconds();
 
   const navigate = useNavigate();
