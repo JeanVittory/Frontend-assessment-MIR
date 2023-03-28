@@ -2,7 +2,7 @@
 
 This assessment is being build to the Make it Real Bootcamp.
 
-## Features
+## FEATURES
 
 - Build a web application which consists of three pages:
   - Home
@@ -31,7 +31,7 @@ Should show in this page your personal information:
 - Email
 - Github
 
-## Installation
+## INSTALLATION
 
 It requires [Node.js](https://nodejs.org/) v16+ to run.
 
@@ -60,3 +60,9 @@ put at the project a .env file with:
 - [Redux Toolkit Query](https://redux-toolkit.js.org/introduction/getting-started) - The Redux Toolkit package is intended to be the standard way to write Redux logic
 - [React Icons](https://react-icons.github.io/react-icons/) - Library to use popular icons easily.
 - [Semantic UI](https://semantic-ui.com/) - Library to use components.
+
+## DEPLOY
+
+```sh
+  https://frontend-assessment-mir.vercel.app/home
+```
